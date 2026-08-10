@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Browser - Wallpapers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<button id="toggleSidebar">☰</button>
+
+<div class="container">
+    <aside id="sidebar">
+        <h2>Wallpapers Browser</h2>
+
+        <div class="inputGroup">
+            <label>Tags</label>
+            <input
+                type="text"
+                id="tags"
+                placeholder="landscape anime cyberpunk"
+                autocomplete="off">
+            <div id="tagSuggestions"></div>
+        </div>
+
+        <label>Max Page</label>
+        <input
+            type="number"
+            id="maxPage"
+            value="10"
+            min="1">
+
+        <label>Attempts</label>
+        <input
+            type="number"
+            id="tries"
+            value="10"
+            min="1">
+
+        <label>Items</label>
+        <input
+            id="items"
+            type="number"
+            value="1"
+            min="1"
+            max="100">
+
+        <div class="row-group">
+            <div class="col">
+                <label>Source</label>
+            <select id="site">
+                <option value="wallhaven">Wallhaven</option>
+                <option value="pexels">Pexels</option>
+                <option value="pixabay">Pixabay</option>
+                <option value="openverse">Openverse</option>
+                <option value="picsum">Lorem Picsum</option>
+                <option value="nasa">NASA</option>
+                <option value="met">The Met</option>
+            </select>
+            </div>
+            <div class="col">
+                <label>Layout</label>
+                <select id="layoutStyle">
+                    <option value="pinterest">Pinterest</option>
+                    <option value="grid">Grid</option>
+                    <option value="fit">Fit</option>
+                    <option value="crop">Crop</option>
+                    <option value="screen-crop">Screen</option>
+                </select>
+            </div>
+        </div>
+
+        <button id="randomBtn">Random</button>
+        <button id="muteBtn">🔇 Unmute All</button>
+        <button id="playBtn">⏸ Pause All</button>
+
+        <hr>
+
+        <button onclick="location.href='index.html'">🏠 Test</button>
+        <button onclick="location.href='reddit.html'">🤖 Reddit</button>
+
+        <hr>
+    </aside>
+
+    <main id="viewer">
+        <div id="gallery" class="layout-pinterest">
+        </div>
+    </main>
+</div>
+
+<div id="preview" class="hidden">
+    <div id="previewContent"></div>
+    <div id="previewToolbar">
+        <button id="closePreview">✕ Close</button>
+        <button id="openPost">🔗 Open</button>
+        <button id="downloadMedia">⬇ Download</button>
+        <button id="copyLink">📋 Copy Link</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
